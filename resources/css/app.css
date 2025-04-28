@@ -1,0 +1,44 @@
+/* Import Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Font */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
+
+/* Custom Styles */
+:root {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Lazy loading transition */
+.lazyload,
+.lazyloading {
+    @apply opacity-0 transition-opacity duration-300;
+}
+
+.lazyloaded {
+    @apply opacity-100;
+}
+
+/* Pagination Style */
+.pagination {
+    @apply flex justify-center mt-8;
+}
+
+.page-item {
+    @apply mx-1;
+}
+
+.page-link {
+    @apply px-4 py-2 bg-white border rounded hover:bg-gray-100;
+}
+
+.page-item.active .page-link {
+    @apply bg-blue-500 text-white border-blue-500;
+}
+
+/* Custom Utility Classes */
+.font-instrument {
+    font-family: var(--font-sans);
+}
